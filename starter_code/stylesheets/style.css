@@ -33,6 +33,7 @@ body {
   background-color: pink;
   font-family: "Work+Sans", Arial, Helvetica, sans-serif;
   /* overflow: hidden; */
+  /* overflow: hidden; */
   /* width: 100vh; */
   /* max-width: 768px; */
   /* overflow-x: hidden; */
@@ -298,7 +299,7 @@ section#statistics {
     align-items: center;
     list-style: none;
     padding-left: 0;
-    margin-top: 1, 2rem;
+    margin-top: 1rem, 2rem;
     /* border: 1px black solid; */
 
     li {
@@ -410,8 +411,7 @@ hr {
 }
 
 .fab {
-  height: 3rem;
-  width: 3rem;
+  font-size: 2rem;
   border: 1px solid white;
 }
 
@@ -427,28 +427,67 @@ footer div small {
   /* border: 1px black solid; */
 }
 
-
-@media (min-width: 768px) and (max-width: 1024px)  {
+/*-----------------------------------------------------------------*/
+@media ( 768px < width)  {
 
   nav{
     height: 4rem;
   }
 
   header{
-    height: 60vh;
+    /* height: 80vh; */
     flex-direction: row;
+    /* position: relative; */
+    /* position: relative; */
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 0;
+    /* margin-top: 5rem; */
+    padding-bottom: 10rem;
     /* border: 1px solid white; */
-    /* position: relative; */
-    /* border: 1px solid #4285f4; */
-    /* position: relative; */
 
-    > div{
-      max-width: 55%;
-      /* height: 100%; */
+    .hero{
       background-image: url("../images/background-singup.png");
       background-size:cover;
-      padding-top: 3rem;
-      /* border:1px white solid; */
+      max-width: 70%;
+      margin-top: 0;
+      /* border: 2px blue solid; */
+
+      h1{
+        margin-top: 2rem;
+        font-size: 7rem;
+      }
+
+      p{
+        font-size: 2rem;
+        width: 70%;
+      }
+
+      div.sign-up-buttons{
+        gap: 1rem;
+        .btn{
+          font-size: 1rem;
+          width: 100%;
+          height: 4rem;
+        }
+      }
+    }
+
+    .main-screenshot {
+      /* overflow: hidden; */
+      padding: 3rem;
+      position: absolute;
+      height: 480px;
+      right: -39%;
+      top: 20%;
+      /* border: 2px yellow solid; */
+
+      img{
+        object-fit: contain;
+        height: 100%;
+        /* position: absolute; */
+        border: 1px border white;
+      }
     }
 
     h1{
@@ -461,25 +500,128 @@ footer div small {
       text-align: left;
       margin-left: 1rem;
     }
+  }
 
-    /* .main-screenshot{
-      /* display: none; */
+  section#companies{
+    height: 11rem;
 
+    p{
+      font-size: 1rem;
     }
 
-
-  #statistics{
-
-    ul {
-      display: flex;
-      flex-direction: row !important;
+    div{
+      margin-top: 1.5rem;
+      justify-content: space-evenly;
       /* border: 1px black solid; */
-      
-      li{
-        /* border: 1px black solid; */
-        
+
+      img{
+        height: 3rem;
+      }
+
+      .logo-target, .logo-nasa{
+        height: 3.5rem;
       }
     }
   }
+
+  section#statistics{
+    padding: 4rem;
+    /* background-color: orange; */
+
+    h3{
+      font-size: 2rem;
+      /* margin-top: 2rem; */
+      margin-bottom: 1.5rem;
+    }
+
+    p:first-of-type {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+  }
+
+  section#statistics ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* border: 1px black solid; */
+
+    li{
+      text-align: left;
+
+      p:last-child{
+        width: 10rem;
+      }
+
+      span{
+      font-size: 3.5rem;
+      font-weight: 600;
+      }
+    }
+
+    li:nth-child(2){
+
+      p:last-child{
+        width: 12rem;
+      }
+    }
+
+    li:nth-child(3){
+
+      p:last-child{
+        width: 11rem;
+      }
+    }
+  }
+  .ref-statistics{
+    display: none;
+  }
   
+section.call-to-action{
+  padding: 2rem;
+
+  h3{
+    font-size: 2.5rem;
+  }
+
+  button{
+    width: 70vw;
+    height: 3rem;
+  }
 }
+
+footer{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  height: auto;
+  /* border: 1px solid black; */
+}
+
+footer ul {
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  /* border: 1px solid black; */
+}
+
+#socials{
+  width: 45vw;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-left: 2rem; */
+  margin-bottom: 3rem;
+  /* border: 1px solid black; */
+}
+
+footer div small {
+  font-size: 0.9rem;
+  /* margin-left: 3rem; */
+  padding: 1.8rem;
+  
+  /* border: 1px solid black; */
+}
+  
+} /*media query small screens*/

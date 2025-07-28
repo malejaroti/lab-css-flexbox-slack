@@ -61,7 +61,7 @@
 
     <!-- HEADER -->
     <header>
-      <div>
+      <div class="hero">
         <h1>Great teamwork starts with a digital HQ</h1>
 
         <p><span>Slack is free to try</span> for as long as you'd like.</p>
@@ -109,19 +109,15 @@
 
           <li>
             <p><span>86%</span></p>
-            <p>
-              feel their ability to work remotely has improved has improved*
-            </p>
+            <p>feel their ability to work remotely has improved*</p>
           </li>
 
           <li>
             <p><span>88%</span></p>
-            <p>
-              feel more connected to their teams*
-            </p>
+            <p>feel more connected to their teams*</p>
           </li>
         </ul>
-        <p class="ref-statistics"><span>*</span> Weighted average. Based on 2.707 survey responses from weekly Slack users in the U.S., UK, Australia and Canada with a +- 2% margin of error at 95% CI (August 2020). </p>
+        <p class="ref-statistics"><span>*</span> Weighted average. Based on 2.707 survey responses from weekly Slack users in the U.S., UK, Australia and Canada with a +- 2% margin of error at 95% CI (August 2020).</p>
       </section>
 
       <section class="call-to-action purple-background">
@@ -132,7 +128,6 @@
       </section>
     </main>
 
-    
     <footer>
       <hr />
 
@@ -167,21 +162,8 @@
     </footer>
     <script>
       // Evita que el navegador restablezca scroll por defecto
-      if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-      }
-
-      // Guarda el scroll antes de recargar
-      window.addEventListener("beforeunload", () => {
-        sessionStorage.setItem("savedScrollY", window.scrollY);
-      });
-
-      // Restaura el scroll al volver a cargar
-      window.addEventListener("load", () => {
-        const savedScroll = sessionStorage.getItem("savedScrollY");
-        if (savedScroll !== null) {
-          window.scrollTo(0, parseInt(savedScroll));
-        }
+      addEventListener("DOMContentLoaded", () => {
+        window.scrollTo(0, document.body.scrollHeight);
       });
     </script>
   </body>
